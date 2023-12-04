@@ -1,0 +1,31 @@
+:root {
+    --yellow: #F9C903;
+    --blue: #00337F;
+}
+
+body {
+    font-family: 'Hedvig Letters Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: lightcoral; */
+    font-size: 1em;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+    margin: auto;
+    padding: 1em 0;
+}
+
+a {
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: var(--blue);
+    border-bottom: solid 3px var(--yellow);
+}

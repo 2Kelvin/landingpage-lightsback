@@ -47,6 +47,7 @@ button {
     font-size: 1.1em;
     height: fit-content;
     cursor: pointer;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* <-------------------- navbar menu --------------------> */
@@ -91,6 +92,13 @@ a:active {
 .form,
 .other {
     margin-bottom: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tips .phoneImg {
+    width: 80%;
 }
 
 /* <-------------------- about section --------------------> */
@@ -101,4 +109,86 @@ a:active {
 
 .about p:last-of-type {
     margin-bottom: 3em;
+}
+
+
+/* <-------------------- MEDIA QUERIES --------------------> */
+
+@media screen and (min-width: 500px) {
+    .wholeWebsite {
+        padding: 0 5em;
+    }
+
+    .tips .phoneImg {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .tips .phoneImg {
+        width: 65%;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .wholeWebsite {
+        padding: 0 1.2em;
+    }
+
+    .intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 24vh;
+    }
+
+    .intro img,
+    .tips img,
+    .form img {
+        width: 100%;
+        /* height: 100%; */
+    }
+
+    .mainBg {
+        display: flex;
+        align-items: center;
+    }
+
+    .intro .forFlex button {
+        margin-top: 2em;
+    }
+
+    .tips,
+    .form, .other {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        min-height: 27vh;
+    }
+
+    .tips .content, .other .content {
+        grid-row: 1/2;
+        grid-column: 1/2;
+        padding: 0 1em;
+    }
+
+    .tips .mainBg, .other .mainBg {
+        justify-content: left;
+        grid-row: 1/2;
+        grid-column: 2/3;
+    }
+
+    .form .content {
+        grid-row: 1/2;
+        grid-column: 2/3;
+        padding: 0 1em;
+    }
+
+    .form .mainBg {
+        justify-content: right;
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+
+    .about {
+        padding: 0 5em;
+    }
 }
